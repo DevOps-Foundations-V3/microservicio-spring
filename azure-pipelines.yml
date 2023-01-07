@@ -7,7 +7,7 @@
 #- main
 #pool:
 
-#trigger:
+# trigger:
 #  branches:
 #    include:
 #    - feature-ms-JoseSilva-mensaje
