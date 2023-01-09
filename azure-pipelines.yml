@@ -1,8 +1,3 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 #trigger: 
 #- main
 #pool:
@@ -12,9 +7,9 @@
 #    include:
 #    - feature-ms-JoseSilva-mensaje
 
-#pool: 'Default'
-pool:
-  vmImage: ubuntu-latest
+pool: 'Default'
+#pool:
+  #vmImage: ubuntu-latest
 
 steps:
 - task: Gradle@3
@@ -25,4 +20,26 @@ steps:
     testResultsFiles: '**/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
     sonarQubeRunAnalysis: false
+    spotBugsAnalysis: false
+  displayName: Compilacion con Gradle
+
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'Sonarcloud'
+    organization: 'devops-foundations-v3'
+    #scannerMode: 'MSBuild'
+    projectKey: 'DevOps-Foundations-V3_microservicio-spring'
+    projectName: 'microservicio-spring'
+  displayName: Preparando Analisis SonarCloud
+
+- task: Gradle@3
+  inputs:
+    gradleWrapperFile: 'gradlew'
+    tasks: 'sonarqube'
+    publishJUnitResults: true
+    testResultsFiles: '**/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    sonarQubeRunAnalysis: true
+    sqGradlePluginVersionChoice: 'specify'
+    sonarQubeGradlePluginVersion: '3.3'
     spotBugsAnalysis: false
