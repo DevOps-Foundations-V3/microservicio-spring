@@ -54,7 +54,7 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'docker-propio'
-    repository: 'microservicio-spring'
+    repository: 'jsilvae/microservicio-spring'
     command: 'build'
     Dockerfile: '**/Dockerfile'
     tags: 'latest'
@@ -63,7 +63,7 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'docker-propio'
-    repository: 'microservicio-spring'
+    repository: 'jsilvae/microservicio-spring'
     command: 'push'
     tags: 'latest'
   displayName: Push en Docker
