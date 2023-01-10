@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.testingweb.WebMockTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-01-10T14:47:14" hostname="JSILVAE-CL" time="0.218">
+  <properties/>
+  <testcase name="greetingShouldReturnMessageFromService()" classname="com.example.testingweb.WebMockTest" time="0.218"/>
+  <system-out><![CDATA[2023-01-10 11:47:11.734  INFO 28240 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.testingweb.WebMockTest], using SpringBootContextLoader
+2023-01-10 11:47:11.738  INFO 28240 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.testingweb.WebMockTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-01-10 11:47:11.738  INFO 28240 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.testingweb.WebMockTest]: WebMockTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-01-10 11:47:11.753  INFO 28240 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.testingweb.TestingWebApplication for test class com.example.testingweb.WebMockTest
+2023-01-10 11:47:11.756  INFO 28240 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-01-10 11:47:11.760  INFO 28240 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3d2528e5, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@65188563, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@758d2e2b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@40e7400f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@54913af6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@75038e9a, org.springframework.test.context.event.EventPublishingTestExecutionListener@69630a67, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@137ec87c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4e65066f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@277b2667, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@56ba20dd, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@33622f5e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@55520123]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.6.3)
+
+2023-01-10 11:47:11.892  INFO 28240 --- [    Test worker] com.example.testingweb.WebMockTest       : Starting WebMockTest using Java 11.0.16.1 on JSILVAE-CL with PID 28240 (started by jsilvae in C:\Users\jsilvae\Documents\clase-github\microservicio-spring)
+2023-01-10 11:47:11.893  INFO 28240 --- [    Test worker] com.example.testingweb.WebMockTest       : No active profile set, falling back to default profiles: default
+2023-01-10 11:47:14.479  INFO 28240 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-01-10 11:47:14.480  INFO 28240 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-01-10 11:47:14.482  INFO 28240 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-01-10 11:47:14.557  INFO 28240 --- [    Test worker] com.example.testingweb.WebMockTest       : Started WebMockTest in 2.791 seconds (JVM running for 40.315)
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /greeting
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.testingweb.GreetingController
+           Method = com.example.testingweb.GreetingController#greeting()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"11"]
+     Content type = text/plain;charset=UTF-8
+             Body = Hello, Mock
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
