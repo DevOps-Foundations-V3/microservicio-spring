@@ -4,6 +4,7 @@ metadata:
   name: microservicio-spring
   labels:
     app: microservicio-spring
+
 spec:
   replicas: 1
   selector:
